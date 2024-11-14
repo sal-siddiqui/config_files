@@ -1,8 +1,10 @@
 # Configuration Files
 
-<div style="text-align: center;">
-  <img src="imgs/config-files.png" alt="Alt text">
-</div>
+<p align="center">
+  <img src="./imgs/config-files.png" alt="CANNOT DISPLAY IMAGE" height="300"/>
+</p>
+
+</p>
 
 This repository contains my personal configuration files for:
 
