@@ -1,0 +1,91 @@
+{
+  // Changing The Theme & Icons
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorCustomizations": {
+    "[Everforest Dark]": {
+      "list.hoverBackground": "#3d484d90",
+      "list.inactiveSelectionBackground": "#3d484d90",
+      "editor.foldBackground": "#3d484d90"
+    }
+  },
+
+  // Getting Rid Of Clutter
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+
+  // Modifying The Editor
+  "editor.fontFamily": "Consolas",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.8,
+  "editor.wordWrap": "on",
+  "editor.stickyScroll.enabled": false,
+  "editor.selectionHighlight": false,
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": false,
+  "editor.renderWhitespace": "none",
+  "editor.lightbulb.enabled": "off",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.occurrencesHighlight": "off",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.foldingHighlight": false,
+  "editor.roundedSelection": false,
+  "editor.hideCursorInOverviewRuler": true,
+
+  // Modifying The Terminal
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorStyleInactive": "none",
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.lineHeight": 1.3,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.tabs.showActions": "never",
+
+  // Zen Mode
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.showTabs": "multiple",
+
+  // Language Specific Settings & Extensions
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
+  "dart.flutterSdkPath": "C:\\dev\\flutter",
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.executorMap": {
+    "python": "clear && cd $dir && python $fileName"
+  },
+
+  // Miscellaneous Changes
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "toggle",
+  "explorer.compactFolders": false,
+  "explorer.autoOpenDroppedFile": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "none",
+
+  // Automatic Settings
+  "workbench.editorAssociations": {
+    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+  },
+  "vscode-office.editorTheme": "Auto",
+  "vscode-office.openOutline": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+}
