@@ -6,7 +6,8 @@
     "[Everforest Dark]": {
       "list.hoverBackground": "#3d484d90",
       "list.inactiveSelectionBackground": "#3d484d90",
-      "editor.foldBackground": "#3d484d90"
+      "editor.foldBackground": "#3d484d90",
+      "editorStickyScroll.background": "#2d353b",
     }
   },
 
