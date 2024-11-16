@@ -7,7 +7,7 @@
       "list.hoverBackground": "#3d484d90",
       "list.inactiveSelectionBackground": "#3d484d90",
       "editor.foldBackground": "#3d484d90",
-       "scrollbar.shadow": "#2d353b",
+      "scrollbar.shadow": "#2d353b"
     }
   },
 
@@ -38,7 +38,7 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.foldingHighlight": false,
   "editor.roundedSelection": false,
-  "editor.hideCursorInOverviewRuler": true,
+  "editor.hideCursorInOverviewRuler": true, 
 
   // Modifying The Terminal
   "terminal.integrated.fontSize": 16,
@@ -48,11 +48,6 @@
   "terminal.integrated.lineHeight": 1.3,
   "terminal.integrated.tabs.enabled": false,
   "terminal.integrated.tabs.showActions": "never",
-
-  // Zen Mode
-  "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.showTabs": "multiple",
 
   // Language Specific Settings & Extensions
   "[python]": {
@@ -83,10 +78,5 @@
   // Automatic Settings
   "workbench.editorAssociations": {
     "{git,gitlens}:/**/*.{md,csv,svg}": "default"
-  },
-  "vscode-office.editorTheme": "Auto",
-  "vscode-office.openOutline": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
   }
 }
