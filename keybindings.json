@@ -1,16 +1,64 @@
 // Place your key bindings in this file to override the defaults
 [
+  // run code runner
+  {
+    "key": "shift+enter",
+    "command": "code-runner.run",
+    "when": "editorFocus"
+  },
+
+  // focus on file explorer
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorFocus"
+  },
+  
+  // focus on terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus"
+  },
+
+  // focus on the editor
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus"
+  },
+
+
+  // focus on the editor (stronger)
+  {
+    "key": "ctrl+shift+k",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeSidebar",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "view.workbench.explorer.fileView.visible"
+  },
+
+  // focus on the editor (stronger)
+  {
+    "key": "ctrl+shift+k",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closePanel",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "panelFocus || panelVisible"
+  },
+  
+  // comments (stronger)
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+enter",
-    "command": "code-runner.run"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.focusActiveEditorGroup"
+    "when": "editorTextFocus"
   }
 ]
