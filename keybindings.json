@@ -4,34 +4,25 @@
   {
     "key": "shift+enter",
     "command": "code-runner.run",
-    "when": "editorFocus"
   },
-
-  // focus on file explorer
-  {
-    "key": "ctrl+j",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "editorFocus"
-  },
-  
   // focus on terminal
   {
-    "key": "ctrl+k",
+    "key": "ctrl+j",
     "command": "workbench.action.terminal.focus",
-    "when": "editorFocus"
   },
-
-  // focus on the editor
+  // focus on explorer
   {
     "key": "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorFocus"
+    "command": "workbench.files.action.focusFilesExplorer",
   },
-
-
+  // focus on editor
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
   // focus on the editor (stronger)
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+shift+k",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -41,10 +32,9 @@
     },
     "when": "view.workbench.explorer.fileView.visible"
   },
-
   // focus on the editor (stronger)
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+shift+k",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -54,7 +44,6 @@
     },
     "when": "panelFocus || panelVisible"
   },
-  
   // comments (stronger)
   {
     "key": "ctrl+shift+/",
