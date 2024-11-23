@@ -3,51 +3,31 @@
   // run code runner
   {
     "key": "shift+enter",
-    "command": "code-runner.run",
+    "command": "code-runner.run"
   },
-  // focus on terminal
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.terminal.focus",
-  },
-  // focus on explorer
-  {
-    "key": "ctrl+l",
-    "command": "workbench.files.action.focusFilesExplorer",
-  },
-  // focus on editor
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  // focus on the editor (stronger)
-  {
-    "key": "ctrl+shift+k",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closeSidebar",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    "when": "view.workbench.explorer.fileView.visible"
-  },
-  // focus on the editor (stronger)
-  {
-    "key": "ctrl+shift+k",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closePanel",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    "when": "panelFocus || panelVisible"
-  },
+
   // comments (stronger)
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
-    "when": "editorTextFocus"
-  }
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // focus on editor
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+  },
+ 
+  // toggle terminal
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+  },
+
+  // toggle side bar
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
 ]
