@@ -1,96 +1,83 @@
-/* Note: Download the following extensions
-  1. Everforest Theme
-  2. VsCode Icons
-  3. Code Runner
-  4. Ruff
-  5. Error Lens
-  6. Python
-  7. autoDocstring
-*/
 {
-  // Changing The Theme & Icons
-  "workbench.colorTheme": "Everforest Dark",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.colorCustomizations": {
-    "[Everforest Dark]": {
-      "list.hoverBackground": "#3d484d90",
-      "editor.foldBackground": "#3d484d90",
-      "list.inactiveSelectionBackground": "#3d484d90",
-      "scrollbar.shadow": "#2d353b",
-      "editorOverviewRuler.bracketMatchForeground": "#2d353b"
+    // Theme & Visual Customization
+    "workbench.colorTheme": "Everforest Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+        "[Everforest Dark]": {
+            "list.hoverBackground": "#3d484d90",
+            "editor.foldBackground": "#3d484d90",
+            "list.inactiveSelectionBackground": "#3d484d90",
+            "scrollbar.shadow": "#2d353b",
+            "editorOverviewRuler.bracketMatchForeground": "#2d353b"
+        }
+    },
+    // Interface Layout
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "breadcrumbs.enabled": false,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    // Editor Core Settings
+    "editor.fontFamily": "Consolas",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 1.8,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    // Editor Visual Elements
+    "editor.stickyScroll.enabled": false,
+    "editor.selectionHighlight": false,
+    "editor.guides.indentation": false,
+    "editor.renderWhitespace": "none",
+    "editor.lightbulb.enabled": "off",
+    "editor.occurrencesHighlight": "off",
+    "editor.minimap.enabled": false,
+    "editor.foldingHighlight": false,
+    "editor.roundedSelection": false,
+    "editor.hideCursorInOverviewRuler": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none",
+    "editor.scrollbar.horizontal": "hidden",
+    "workbench.tree.renderIndentGuides": "none",
+    // Terminal Configuration
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.3,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorStyleInactive": "none",
+    "terminal.integrated.hideOnStartup": "always",
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.tabs.showActions": "never",
+    // Zen Mode Settings
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    // Explorer Settings
+    "explorer.compactFolders": false,
+    "explorer.autoOpenDroppedFile": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // Language Specific Settings
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "dart.flutterSdkPath": "C:\\dev\\flutter",
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    // Extension Settings
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.executorMap": {
+        "python": "clear && cd $dir && python $fileName"
+    },
+    // Version Control
+    "git.decorations.enabled": false,
+    "scm.diffDecorations": "none",
+    // File Associations
+    "workbench.editorAssociations": {
+        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
     }
-  },
-
-  // Getting Rid Of Clutter
-  "workbench.sideBar.location": "right",
-  "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false,
-  "workbench.layoutControl.enabled": false,
-  "workbench.tree.renderIndentGuides": "none",
-  "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
-
-  // Modifying The Editor
-  "editor.fontFamily": "Consolas",
-  "editor.fontSize": 16,
-  "editor.lineHeight": 1.8,
-  "editor.wordWrap": "on",
-  "editor.stickyScroll.enabled": false,
-  "editor.selectionHighlight": false,
-  "editor.formatOnSave": true,
-  "editor.guides.indentation": false,
-  "editor.renderWhitespace": "none",
-  "editor.lightbulb.enabled": "off",
-  "editor.cursorBlinking": "solid",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.occurrencesHighlight": "off",
-  "editor.minimap.enabled": false,
-  "editor.foldingHighlight": false,
-  "editor.roundedSelection": false,
-  "editor.hideCursorInOverviewRuler": false,
-  "editor.overviewRulerBorder": false,
-  "editor.renderLineHighlight": "none",
-  "editor.scrollbar.horizontal": "hidden",
-
-  // Modifying The Terminal
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.cursorStyleInactive": "none",
-  "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.lineHeight": 1.3,
-  "terminal.integrated.tabs.enabled": false,
-  "terminal.integrated.tabs.showActions": "never",
-
-  // Zen Mode
-  "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false,
-
-  // Language Specific Settings & Extensions
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "dart.flutterSdkPath": "C:\\dev\\flutter",
-  "dart.previewFlutterUiGuides": true,
-  "dart.previewFlutterUiGuidesCustomTracking": true,
-  "code-runner.runInTerminal": true,
-  "code-runner.saveAllFilesBeforeRun": true,
-  "code-runner.executorMap": {
-    "python": "clear && cd $dir && python $fileName"
-  },
-
-  // Miscellaneous Changes
-  "breadcrumbs.enabled": false,
-  "window.commandCenter": false,
-  "window.menuBarVisibility": "toggle",
-  "explorer.compactFolders": false,
-  "explorer.autoOpenDroppedFile": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "git.decorations.enabled": false,
-  "scm.diffDecorations": "none",
-
-  // Automatic Settings
-  "workbench.editorAssociations": {
-    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
-  }
 }
