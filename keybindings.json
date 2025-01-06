@@ -1,33 +1,14 @@
 // Place your key bindings in this file to override the defaults
 [
-  // run code runner
-  {
-    "key": "shift+enter",
-    "command": "code-runner.run"
-  },
-
-  // comments (stronger)
-  {
-    "key": "ctrl+shift+/",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-
-  // focus on editor
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-  },
- 
-  // toggle terminal
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.terminal.toggleTerminal",
-  },
-
-  // toggle side bar
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.toggleSidebarVisibility",
-  },
+    // run code runner
+    {
+        "key": "shift+enter",
+        "command": "code-runner.run"
+    },
+    // comments (stronger)
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
