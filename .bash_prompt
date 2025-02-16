@@ -1,6 +1,6 @@
 # Set the PROMPT_COMMAND to update the branch information dynamically
-PROMPT_COMMAND='
 # Check if the current directory is inside a git repository. If so, get the current branch name; otherwise, leave it empty.
+PROMPT_COMMAND='
 PS1_BRANCH=$(git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git branch --show-current 2>/dev/null || echo "")
 '
 
