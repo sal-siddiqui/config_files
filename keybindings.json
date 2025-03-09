@@ -1,20 +1,36 @@
 // Place your key bindings in this file to override the defaults
 [
-  // run code runner
+  // ——— Run Code Runner (Executes the current script)
   {
     "key": "shift+enter",
     "command": "code-runner.run"
   },
-  // comments (stronger)
+
+  // ——— Toggles Block Comments
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Go to next error
+
+  // ——— Go to Next Error
   {
     "key": "ctrl+numpad1",
     "command": "editor.action.marker.next",
     "when": "editorFocus"
+  },
+
+  // ——— Quick Fix
+  {
+    "key": "ctrl+numpad2",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+
+  // ——— Accept Selected Code Action
+  {
+    "key": "ctrl+numpad2",
+    "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
   }
 ]
