@@ -5,6 +5,7 @@ get_git_branch() {
 
 # Function to build the PS1 prompt dynamically
 build_prompt() {
+  local venv=""
   local user="\[\e[1;91m\]\u\[\e[0m\]"          # Username in red
   local at="\[\e[1;37m\]at\[\e[0m\]"            # "at" in white
   local host="\[\e[1;32m\]\H\[\e[0m\]"          # Hostname in green (ish)
@@ -15,11 +16,16 @@ build_prompt() {
 
   # If a Git branch is present, add "on <branch>" in yellow
   if [[ -n "$branch" ]]; then
-    on_branch=" \[\e[1;37m\]on\[\e[0m\] \[\e[1;33m\]$branch\[\e[0m\]"
+    on_branch="\[\e[1;37m\]on\[\e[0m\] \[\e[1;33m\]$branch\[\e[0m\]"
+  fi
+
+  # If a virtual environment is present, add "(<venv>)" in yellow
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    venv="\[\e[1;33m\]($(basename "$VIRTUAL_ENV"))\[\e[0m\]"
   fi
 
   # Build the final PS1 prompt
-  echo "${user} ${at} ${host} ${in} ${dir}${on_branch}\n\[\e[1;37m\]\\$\[\e[0m\] "
+  echo "\n${venv} ${user} ${at} ${host} ${in} ${dir} ${on_branch}\n\[\e[1;37m\]\\$\[\e[0m\] "
 }
 
 # Set PROMPT_COMMAND to update the PS1 dynamically
