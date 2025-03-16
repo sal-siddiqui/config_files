@@ -24,7 +24,7 @@
   },
   "editor.tokenColorCustomizations": {
     "[Everforest Dark]": {
-      "comments": "#a7c080"
+      "comments": "#87A96B"
     }
   },
 
@@ -42,7 +42,7 @@
   "breadcrumbs.enabled": false,
 
   // ——— Editor
-  "editor.fontFamily": "Consolas", // set editor font
+  "editor.fontFamily": "Inconsolata, Consolas", // set editor font
   "editor.fontSize": 15, // set editor font size
   "editor.lineHeight": 2.0, // increase line height for readability
   "editor.wordWrap": "on", // enable word wrapping
