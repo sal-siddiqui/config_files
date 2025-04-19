@@ -1,31 +1,31 @@
 // ——— Recommended Extensions
-// 01. Code Runner – Run code snippets via shortcuts.
-// 02. djLint – Format and lint Django, Jinja, and other templating languages.
-// 03. Error Lens – Inline highlights for errors and warnings.
-// 04. Everforest – Preferred color theme (or replace with yours).
-// 05. Flutter – Tools and support for Flutter development.
-// 06. Highlight Matching Tag – Highlights matching HTML/XML tags.
-// 07. HTML End Tag Labels – Displays end tag names for clarity.
-// 08. Jinja – Syntax highlighting for Jinja templates.
-// 09. Jinja Snippets – Handy Jinja template snippets.
-// 10. Material Icon Theme – Preferred icon theme.
-// 11. Prettier – Automatic code formatting.
-// 12. Ruff – Fast Python linter and formatter.
-// 13. Python – Official Python extension (IntelliSense, linting, debugging).
+// – Code Runner: Run code snippets via shortcuts.
+// – djLint: Format and lint Django, Jinja, and other templating languages.
+// – Error Lens: Inline highlights for errors and warnings.
+// – Everforest: Preferred color theme (or replace with yours).
+// – Highlight Matching Tag: Highlights matching HTML/XML tags.
+// – HTML End Tag Labels: Displays end tag names for clarity.
+// – Jinja: Syntax highlighting for Jinja templates.
+// – Jinja Snippets: Handy Jinja template snippets.
+// – Material Icon Theme: Preferred icon theme.
+// – Prettier: Automatic code formatting.
+// – Ruff: Fast Python linter and formatter.
+// – Python: Official Python extension (IntelliSense, linting, debugging).
 
 {
   // ——— Theme & Colors
   "workbench.colorTheme": "Everforest Dark", // set the color theme
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
-      "list.hoverBackground": "#3d484d90",
-      "scrollbar.shadow": "#2d353b"
+      "scrollbar.shadow": "#2d353b",
+      "panel.background": "#272e33",
+      "sideBar.background": "#272e33",
+      "panel.border": "#272e33",
+      "sideBar.border": "#272e33"
     }
   },
   "editor.tokenColorCustomizations": {
-    "[Everforest Dark]": {
-      "comments": "#87A96B"
-    }
+    "[Everforest Dark]": {}
   },
 
   // ——— Layout & Interface
@@ -95,7 +95,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode" // prettier for json files
   },
   "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
-    "editor.defaultFormatter": "monosans.djlint" // djLint for templating languages
+    // "editor.defaultFormatter": "monosans.djlint" // formatter for (flask & django)
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // formatter for (angular)
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff" // ruff for python code
