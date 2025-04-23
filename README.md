@@ -12,13 +12,13 @@ This repository contains my personal configuration files to help set up a consis
 
 To apply these configurations:
 
-1. **VSCode Settings & Keybindings**
-   - Copy `settings.json` and `keybindings.json` to your VSCode user settings directory:
-     - macOS: `~/Library/Application Support/Code/User/`
-     - Linux: `~/.config/Code/User/`
-     - Windows: `%APPDATA%\Code\User\`
+**VSCode Settings & Keybindings**
+Copy `settings.json` and `keybindings.json` to your VSCode user settings directory:
+   - macOS: `~/Library/Application Support/Code/User/`
+   - Linux: `~/.config/Code/User/`
+   - Windows: `%APPDATA%\Code\User\`
 
-2. **Bash Prompt**
+**Bash Prompt**
    - Source the `.bash_prompt` file from your `.bashrc` or `.bash_profile`:
      ```bash
      source /path/to/this/repo/.bash_prompt
