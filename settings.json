@@ -13,8 +13,6 @@
 // – Python: Official Python extension (IntelliSense, linting, debugging).
 
 {
-  // ——— Theme & Colors
-  "workbench.colorTheme": "Everforest Dark", // set the color theme
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
       "scrollbar.shadow": "#2d353b",
@@ -29,10 +27,11 @@
   },
 
   // ——— Layout & Interface
+  "workbench.colorTheme": "Everforest Dark", // set the color theme
   "workbench.iconTheme": "material-icon-theme", // set the icon theme
   "workbench.sideBar.location": "right", // move sidebar to the right
   "workbench.activityBar.location": "hidden", // hide the activity bar
-  "workbench.statusBar.visible": false, // hide the status bar for a cleaner look
+  "workbench.statusBar.visible": false, // hide the status bar
   "workbench.layoutControl.enabled": false, // disable layout adjustments
   "workbench.startupEditor": "none", // prevent editor from opening files on startup
   "workbench.tips.enabled": false, // remove breadcrumbs navigation
@@ -40,9 +39,10 @@
   "window.menuBarVisibility": "toggle", // auto-hide menu bar with toggle option
   "workbench.tree.renderIndentGuides": "none", // remove indentation guides in file explorer
   "breadcrumbs.enabled": false,
+  "window.title": " ", // remove the window title
 
   // ——— Editor
-  "editor.fontFamily": "Inconsolata, Consolas", // set editor font
+  "editor.fontFamily": "Consolas", // set editor font
   "editor.fontSize": 15, // set editor font size
   "editor.lineHeight": 2.0, // increase line height for readability
   "editor.wordWrap": "on", // enable word wrapping
@@ -75,7 +75,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
 
   // ——— Explorer
-  "explorer.compactFolders": false, // show full folder names without collapsing
+  "explorer.compactFolders": true, // show full folder names without collapsing
   "explorer.autoOpenDroppedFile": true, // auto-open dropped files
   "explorer.confirmDelete": false, // no delete confirmation prompt
   "explorer.confirmDragAndDrop": false, // no drag-and-drop confirmation
@@ -83,7 +83,6 @@
   "material-icon-theme.hidesExplorerArrows": true, // hide the arrow in the file explorer
   "explorer.fileNesting.enabled": true, // hide flutter gutter icons
   "workbench.tree.indent": 20,
-  "explorer.autoReveal": false,
   "explorer.confirmPasteNative": false,
 
   // ——— Zen Mode
@@ -91,7 +90,7 @@
   "zenMode.hideLineNumbers": false, // show line numbers in zen mode
 
   // ——— Language Specific Settings
-  "[json][jsonc]": {
+  "[json][jsonc][typescript][javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode" // prettier for json files
   },
   "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
