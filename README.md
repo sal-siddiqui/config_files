@@ -20,9 +20,10 @@ Copy `settings.json` and `keybindings.json` to your VSCode user settings directo
 
 **Bash Prompt**
    - Source the `.bash_prompt` file from your `.bashrc` or `.bash_profile`:
-     ```bash
-     source /path/to/this/repo/.bash_prompt
-     ```
+
+```bash
+source /path/to/this/repo/.bash_prompt
+```
 
 ## Notes
 
