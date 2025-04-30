@@ -47,7 +47,6 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
-  "editor.inlineSuggest.enabled": false,
 
   // Terminal Configuration
   "terminal.integrated.fontSize": 15,
