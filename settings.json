@@ -1,18 +1,5 @@
-// ——— Recommended Extensions
-// – Code Runner: Run code snippets via shortcuts.
-// – djLint: Format and lint Django, Jinja, and other templating languages.
-// – Error Lens: Inline highlights for errors and warnings.
-// – Everforest: Preferred color theme (or replace with yours).
-// – Highlight Matching Tag: Highlights matching HTML/XML tags.
-// – HTML End Tag Labels: Displays end tag names for clarity.
-// – Jinja: Syntax highlighting for Jinja templates.
-// – Jinja Snippets: Handy Jinja template snippets.
-// – Material Icon Theme: Preferred icon theme.
-// – Prettier: Automatic code formatting.
-// – Ruff: Fast Python linter and formatter.
-// – Python: Official Python extension (IntelliSense, linting, debugging).
-
 {
+  // Theme customizations
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
       "scrollbar.shadow": "#2d353b",
@@ -26,101 +13,79 @@
     "[Everforest Dark]": {}
   },
 
-  // ——— Layout & Interface
-  "workbench.colorTheme": "Everforest Dark", // set the color theme
-  "workbench.iconTheme": "material-icon-theme", // set the icon theme
-  "workbench.sideBar.location": "right", // move sidebar to the right
-  "workbench.activityBar.location": "hidden", // hide the activity bar
-  "workbench.statusBar.visible": false, // hide the status bar
-  "workbench.layoutControl.enabled": false, // disable layout adjustments
-  "workbench.startupEditor": "none", // prevent editor from opening files on startup
-  "workbench.tips.enabled": false, // remove breadcrumbs navigation
-  "window.commandCenter": false, // hide command center
-  "window.menuBarVisibility": "toggle", // auto-hide menu bar with toggle option
-  "workbench.tree.renderIndentGuides": "none", // remove indentation guides in file explorer
+  // UI Settings
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "window.menuBarVisibility": "toggle",
+  "window.title": " ",
+  "workbench.tips.enabled": false,
+  "window.commandCenter": false,
   "breadcrumbs.enabled": false,
-  "window.title": " ", // remove the window title
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
 
-  // ——— Editor
-  "editor.fontFamily": "Consolas", // set editor font
-  "editor.fontSize": 15, // set editor font size
-  "editor.lineHeight": 2.0, // increase line height for readability
-  "editor.wordWrap": "on", // enable word wrapping
-  "editor.formatOnSave": true, // auto-format code on save
-  "editor.cursorBlinking": "solid", // disable cursor blinking animation
-  "editor.cursorSmoothCaretAnimation": "on", // enable smooth cursor movement
-  "editor.stickyScroll.enabled": false, // disable sticky headers
-  "editor.renderLineHighlight": "none", // no line highlighting
-  "editor.selectionHighlight": false, // no selection highlighting
-  "editor.guides.indentation": false, // no indentation guides
-  "editor.renderWhitespace": "none", // hide whitespace markers
-  "editor.lightbulb.enabled": "off", // remove code suggestion lightbulb
-  "editor.occurrencesHighlight": "off", // no variable occurrences highlight
-  "editor.minimap.enabled": false, // disable code minimap
-  "editor.foldingHighlight": false, // no code folding highlight
-  "editor.roundedSelection": false, // square selection box
-  "editor.hideCursorInOverviewRuler": false, // show cursor in overview
-  "editor.overviewRulerBorder": false, // remove overview ruler border
-  "editor.scrollbar.horizontal": "hidden", // hide horizontal scrollbar
-  "editor.inlayHints.enabled": "off", // turn off inlay hints
+  // Editor Settings
+  "editor.fontFamily": "Consolas",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 2.0,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.stickyScroll.enabled": false,
+  "editor.renderLineHighlight": "none",
+  "editor.selectionHighlight": false,
+  "editor.guides.indentation": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.occurrencesHighlight": "off",
+  "editor.foldingHighlight": false,
+  "editor.inlineSuggest.enabled": false,
 
-  // ——— Terminal
-  "terminal.integrated.fontSize": 15, // terminal font size
-  "terminal.integrated.lineHeight": 1.5, // improve terminal line spacing
-  "terminal.integrated.copyOnSelection": true, // auto-copy on selection
-  "terminal.integrated.cursorStyleInactive": "none", // hide inactive cursor
-  "terminal.integrated.hideOnStartup": "always", // keep terminal hidden on startup
-  "terminal.integrated.tabs.enabled": false, // remove terminal tabs
-  "terminal.integrated.tabs.showActions": "never", // hide terminal tab actions
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  // Terminal Configuration
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.copyOnSelection": true,
 
-  // ——— Explorer
-  "explorer.compactFolders": true, // show full folder names without collapsing
-  "explorer.autoOpenDroppedFile": true, // auto-open dropped files
-  "explorer.confirmDelete": false, // no delete confirmation prompt
-  "explorer.confirmDragAndDrop": false, // no drag-and-drop confirmation
-  "material-icon-theme.folders.theme": "classic", // set the folder theme
-  "material-icon-theme.hidesExplorerArrows": true, // hide the arrow in the file explorer
-  "explorer.fileNesting.enabled": true, // hide flutter gutter icons
+  // File Explorer
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
-  "explorer.confirmPasteNative": false,
 
-  // ——— Zen Mode
-  "zenMode.centerLayout": false, // disable centered layout
-  "zenMode.hideLineNumbers": false, // show line numbers in zen mode
-
-  // ——— Language Specific Settings
-  "[json][jsonc][typescript][javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode" // prettier for json files
-  },
-  "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
-    // "editor.defaultFormatter": "monosans.djlint" // formatter for (flask & django)
-    "editor.defaultFormatter": "esbenp.prettier-vscode" // formatter for (angular)
-  },
+  // Language Specific
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff" // ruff for python code
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python.defaultInterpreterPath": "",
-  "ruff.lineLength": 150,
-  "dart.lineLength": 150, // set dart line length
-  "dart.flutterSdkPath": "C:\\dev\\flutter", // flutter sdk path
-  "dart.previewFlutterUiGuides": true, // enable flutter ui guides
-  "dart.previewFlutterUiGuidesCustomTracking": true, // custom tracking for flutter ui
-  "dart.flutterGutterIcons": false,
-  "djlint.closeVoidTags": true,
-  "djlint.maxLineLength": 70,
-  "djlint.maxAttributeLength": 70,
+  "[html][django-html]": {
+    // "editor.defaultFormatter": "monosans.djlint" (enable extension)
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json][jsonc][typescript][javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "java.inlayHints.parameterNames.enabled": "none",
+
+  // Extensions
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "python": "clear && cd $dir && python $fileName"
+  },
+  "emmet.preferences": { "output.selfClosingStyle": "xhtml" },
+  "djlint.maxLineLength": 50,
+  "djlint.maxAttributeLength": 50,
   "djlint.formatAttributeTemplateTags": true,
   "djlint.maxBlankLines": 2,
+  "ruff.lineLength": 100,
 
-  // ——— Extensions
-  "code-runner.runInTerminal": true, // run code via terminal using code runner
-  "code-runner.saveAllFilesBeforeRun": true, // save all files before execution
-  "code-runner.executorMap": {
-    "python": "clear && cd $dir && python $fileName" // python run command
-  },
-
-  // ——— Version Control
-  "git.decorations.enabled": false, // hide git decorations
-  "scm.diffDecorations": "none" // remove diff decorations
+  // Version Control
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "none"
 }
