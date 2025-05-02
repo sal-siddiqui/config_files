@@ -7,7 +7,7 @@ This repository contains my personal configuration files to help set up a consis
 - [`settings.json`](./settings.json) – VSCode settings
 - [`keybindings.json`](./keybindings.json) – Custom VSCode keybindings
 - [`.bash_prompt`](./.bash_prompt) – Customized Bash prompt setup
-- [`Microsoft.PowerShell_profile.ps1`](./.Microsoft.PowerShell_profile.ps1) - Customized Powershell prompt setup
+- [`Microsoft.PowerShell_profile.ps1`](./Microsoft.PowerShell_profile.ps1) - Customized Powershell prompt setup
 
 ## ▶️ Usage
 
