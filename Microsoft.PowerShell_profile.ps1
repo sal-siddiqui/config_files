@@ -12,25 +12,8 @@ function Get-GitBranch {
 }
 
 function prompt {
-    # Check for .venv and activate if exists
-    $venvPath = Join-Path (Get-Location) ".venv"
-    $activateScript = Join-Path $venvPath "Scripts\Activate.ps1"
-    
-    if (Test-Path $venvPath -PathType Container) {
-        if (-not $env:VIRTUAL_ENV -and (Test-Path $activateScript -PathType Leaf)) {
-            & $activateScript
-        }
-    }
-
     # Escape character
     $esc = [char]27
-
-    # Virtual environment indicator
-    $venv = ""
-    if ($env:VIRTUAL_ENV) {
-        $venvName = Split-Path $env:VIRTUAL_ENV -Leaf
-        $venv = "${esc}[1;33m($venvName)${esc}[0m "
-    }
 
     # User (red)
     $user = "${esc}[1;91m$env:USERNAME${esc}[0m"
