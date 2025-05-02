@@ -2,14 +2,14 @@
 
 This repository contains my personal configuration files to help set up a consistent development environment across machines.
 
-## 📝 Contents
+### 📝 Contents
 
 - [`settings.json`](./settings.json) – VSCode settings
 - [`keybindings.json`](./keybindings.json) – Custom VSCode keybindings
 - [`.bash_prompt`](./.bash_prompt) – Customized Bash prompt setup
 - [`Microsoft.PowerShell_profile.ps1`](./.Microsoft.PowerShell_profile.ps1) - Customized Powershell prompt setup
 
-## ▶️ Usage
+### ▶️ Usage
 
 To apply these configurations:
 
@@ -25,6 +25,7 @@ To apply these configurations:
 
 1. Open your `.bashrc` or `.bash_profile` file.
 2. Add the following line to source the `.bash_prompt` file:
+   
    ```bash
    source /path/to/this/repo/.bash_prompt
    ```
@@ -36,7 +37,7 @@ To apply these configurations:
 3. Copy the contents of the `Microsoft.PowerShell_profile.ps1` file into your new profile file.
 
 
-## Notes
+### Notes
 
 - These files reflect **my personal preferences**. Feel free to fork and adjust as needed.
 - For syncing VSCode settings automatically, consider using the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension.
