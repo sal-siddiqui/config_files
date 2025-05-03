@@ -1,44 +1,39 @@
-function Get-GitBranch {
-    try {
-        $branch = git rev-parse --abbrev-ref HEAD 2>$null
-        if ($branch -eq "HEAD") {
-            $branch = git rev-parse --short HEAD 2>$null
-        }
-        return $branch
-    }
-    catch {
-        return $null
-    }
-}
-
 function prompt {
-    # Escape character
-    $esc = [char]27
+    # Get last exit code (ignore startup errors)
+    $realLastExit = if ($global:LASTEXITCODE -ne $null) { $global:LASTEXITCODE } else { 0 }
 
-    # User (red)
-    $user = "${esc}[1;91m$env:USERNAME${esc}[0m"
+    # Get current path (replace home with ~)
+    $currentPath = (Get-Location).Path.Replace($HOME, "~")
 
-    # "at" (white)
-    $at = "${esc}[1;37mat${esc}[0m"
-
-    # Host (green)
-    $hostname = "${esc}[1;32m$env:COMPUTERNAME${esc}[0m"
-
-    # "in" (white)
-    $in = "${esc}[1;37min${esc}[0m"
-
-    # Current directory (green)
-    $dir = "${esc}[1;32m$(Split-Path -Leaf (Get-Location))${esc}[0m"
-
-    # Git branch (yellow if exists)
-    $branch = Get-GitBranch
-    $onBranch = ""
-    if ($branch) {
-        $onBranch = " ${esc}[1;37mon${esc}[0m ${esc}[1;33m$branch${esc}[0m"
+    # Check for Git branch
+    $gitBranch = ""
+    if (Get-Command git -ErrorAction SilentlyContinue) {
+        $gitBranch = git branch --show-current 2>$null
     }
 
-    # Build the prompt
-    $promptString = "`n${user} ${at} ${hostname} ${in} ${dir}${onBranch}`n${esc}[1;37m`$${esc}[0m "
+    # Colors
+    $pathColor = "Green"
+    $gitColor = "Yellow"
+    $errorColor = "Red"
 
-    return $promptString
+    # Print path (first line)
+    Write-Host ""  # Ensures a line break
+    Write-Host $currentPath -NoNewline -ForegroundColor $pathColor
+
+    # Print Git branch (if any)
+    if ($gitBranch) {
+        Write-Host " [$gitBranch]" -NoNewline -ForegroundColor $gitColor
+    }
+
+    # Only show [X] if a command failed (and it's not startup noise)
+    if ($realLastExit -ne 0) {
+        Write-Host " [X]" -NoNewline -ForegroundColor $errorColor
+    }
+
+    # Reset $LASTEXITCODE to avoid persistence
+    $global:LASTEXITCODE = 0
+
+    # End with a newline and '>' on the next line    
+    Write-Host ""  # Ensures a line break
+    return "> "
 }
