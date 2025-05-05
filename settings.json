@@ -58,14 +58,15 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
+  "files.dialog.defaultPath": "C:\\Users\\salma\\Documents",
 
   // Language Specific
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[html][django-html]": {
-    // "editor.defaultFormatter": "monosans.djlint" (enable extension)
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "monosans.djlint" // (enable extension)
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json][jsonc][typescript][javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
