@@ -12,8 +12,6 @@
   "editor.tokenColorCustomizations": {
     "[Everforest Dark]": {}
   },
-
-  // UI Settings
   "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -33,7 +31,7 @@
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "wordWrapColumn",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
@@ -47,6 +45,7 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
+  "editor.wordWrapColumn": 100,
 
   // Terminal Configuration
   "terminal.integrated.fontSize": 15,
@@ -79,11 +78,6 @@
     "python": "clear && cd $dir && python $fileName"
   },
   "emmet.preferences": { "output.selfClosingStyle": "xhtml" },
-  "djlint.maxLineLength": 50,
-  "djlint.maxAttributeLength": 50,
-  "djlint.formatAttributeTemplateTags": true,
-  "djlint.maxBlankLines": 2,
-  "ruff.lineLength": 100,
 
   // Version Control
   "git.decorations.enabled": false,
