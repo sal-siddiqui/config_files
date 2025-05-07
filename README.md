@@ -1,4 +1,4 @@
-# config-files
+# config_files
 
 This repository contains my personal configuration files to help set up a consistent development environment across machines.
 
