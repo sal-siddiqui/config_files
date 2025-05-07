@@ -1,36 +1,40 @@
 // Place your key bindings in this file to override the defaults
 [
-  // ——— Run Code Runner (Executes the current script)
+  // Run code runner
   {
     "key": "shift+enter",
     "command": "code-runner.run"
   },
 
-  // ——— Toggles Block Comments
+  // Toggle block comment
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  // ——— Go to Next Error
+  // Go to error, warning, info, etc.
   {
     "key": "ctrl+numpad1",
     "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
-
-  // ——— Quick Fix
+  // Show quick fix suggestions
   {
     "key": "ctrl+numpad2",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
 
-  // ——— Accept Selected Code Action
+  // Accept first suggestion
   {
     "key": "ctrl+numpad2",
     "command": "acceptSelectedCodeAction",
     "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
   }
 ]
