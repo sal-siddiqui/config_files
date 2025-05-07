@@ -35,9 +35,6 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
-  },
   "editor.stickyScroll.enabled": false,
   "editor.renderLineHighlight": "none",
   "editor.selectionHighlight": false,
@@ -46,6 +43,9 @@
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
   "editor.wordWrapColumn": 100,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
 
   // Terminal Configuration
   "terminal.integrated.fontSize": 15,
@@ -63,11 +63,10 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "[html][django-html]": {
-    "editor.defaultFormatter": "monosans.djlint" // (enable extension)
-    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[html][django-html][css][javascript][typescript]": {
+    "editor.defaultFormatter": "monosans.djlint"
   },
-  "[json][jsonc][typescript][javascript]": {
+  "[json][jsonc][jsonl]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "java.inlayHints.parameterNames.enabled": "none",
@@ -78,6 +77,8 @@
     "python": "clear && cd $dir && python $fileName"
   },
   "emmet.preferences": { "output.selfClosingStyle": "xhtml" },
+  "djlint.useVenv": false,
+  "djlint.pythonPath": "C:\\Users\\salma\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
 
   // Version Control
   "git.decorations.enabled": false,
