@@ -10,7 +10,7 @@ function prompt {
 
     # Virtual environment (if any)
     $venv = ""
-    if ($env:VIRTUAL_ENV) {
+    if ($env:VIRTUAL_ENV -and $env:PATH -like "*$env:VIRTUAL_ENV*") {
         $venvName = Split-Path -Leaf $env:VIRTUAL_ENV
         $venv = "$green($venvName)$reset "
     }
