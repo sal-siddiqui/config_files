@@ -1,8 +1,8 @@
 # config_files
 
-This repository contains my personal configuration files to help set up a consistent development environment across machines.
+## 📝 Project Overview
 
-## 📝 Contents
+This repository contains my personal configuration files to help set up a consistent development environment across machines.
 
 - [`settings.json`](./settings.json) – VSCode settings
 - [`keybindings.json`](./keybindings.json) – Custom VSCode keybindings
