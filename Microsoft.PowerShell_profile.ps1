@@ -1,30 +1,37 @@
 function prompt {
-    # Get current directory name only (last part of the path)
+    # Get current directory name only
     $currentDir = (Get-Location).Path.Split('\')[-1]
-    
-    # Check for Git branch (if Git is installed)
+
+    # ANSI escape codes
+    $green      = "$([char]27)[0;32m"
+    $blueBold   = "$([char]27)[1;34m"
+    $yellow     = "$([char]27)[0;33m"
+    $reset      = "$([char]27)[0m"
+
+    # Virtual environment (if any)
+    $venv = ""
+    if ($env:VIRTUAL_ENV) {
+        $venvName = Split-Path -Leaf $env:VIRTUAL_ENV
+        $venv = "$green($venvName)$reset "
+    }
+
+    # Git branch (if any)
     $gitBranch = ""
     if (Get-Command git -ErrorAction SilentlyContinue) {
-        $gitBranch = git branch --show-current 2>$null
+        $branch = git branch --show-current 2>$null
+        if ($branch) {
+            $gitBranch = " $yellow[$branch]$reset"
+        }
     }
-    
-    # ANSI escape codes for bold blue text
-    $blueBold = "$([char]27)[1;34m"  # 1=bold, 34=blue
-    $reset = "$([char]27)[0m"        # Reset formatting
-    
-    # Print directory (first line) in bold blue
-    Write-Host ""  # Ensures a line break
-    Write-Host "$blueBold$currentDir$reset" -NoNewline
-    
-    # Print Git branch (if any) in regular yellow (not bold, not blue)
-    if ($gitBranch) {
-        Write-Host " [$gitBranch]" -NoNewline -ForegroundColor Yellow
-    }
-    
-    # Reset $LASTEXITCODE to avoid persistence
+
+    # Display the prompt
+    Write-Host ""
+    Write-Host "$venv$blueBold$currentDir$reset$gitBranch" -NoNewline
+
+    # Reset LASTEXITCODE
     $global:LASTEXITCODE = 0
-    
-    # End with a newline and '>' on the next line    
-    Write-Host ""  # Ensures a line break
+
+    # Final prompt character
+    Write-Host ""
     return "> "
 }
