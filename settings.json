@@ -31,7 +31,7 @@
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
@@ -42,7 +42,6 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
-  "editor.wordWrapColumn": 100,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
@@ -58,6 +57,7 @@
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
   "files.dialog.defaultPath": "C:\\Users\\salma\\Documents",
+  "workbench.editor.enablePreview": false,
 
   // Language Specific
   "[python]": {
@@ -69,12 +69,22 @@
   "[json][jsonc][jsonl]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "java.foldingRange.enabled": true,
+  "java.server.launchMode": "Hybrid",
+  "java.completion.guessMethodArguments": "insertBestGuessedArguments",
   "java.inlayHints.parameterNames.enabled": "none",
+  "java.completion.chain.enabled": true,
+  "java.showBuildStatusOnStart.enabled": "notification",
+  "java.format.onType.enabled": true,
+  "java.edit.smartSemicolonDetection.enabled": true,
+  "java.saveActions.cleanup": true,
+  "java.completion.matchCase": "firstLetter",
+  "java.references.includeAccessors": true,
 
   // Extensions
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
-    "python": "clear && cd $dir && python $fileName"
+    "java": "clear; & 'C:\\Program Files\\Java\\jdk-24\\bin\\java.exe' '@C:\\Users\\salma\\AppData\\Local\\Temp\\cp_1bwxwwh7wzu0bwtdespqge7tb.argfile' 'com.spring_commerce.main.App'"
   },
   "emmet.preferences": { "output.selfClosingStyle": "xhtml" },
   "djlint.useVenv": false,
