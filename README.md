@@ -4,14 +4,37 @@
 
 This repository contains my personal configuration files to help set up a consistent development environment across machines.
 
-- [`settings.json`](./settings.json) – VSCode settings
-- [`keybindings.json`](./keybindings.json) – Custom VSCode keybindings
-- [`.bash_prompt`](./.bash_prompt) – Customized Bash prompt setup
-- [`Microsoft.PowerShell_profile.ps1`](./Microsoft.PowerShell_profile.ps1) - Customized Powershell prompt setup
+Included configuration files:
+
+- [`settings.json`](./vscode/settings.json) – Visual Studio Code settings
+- [`keybindings.json`](./vscode/keybindings.json) – Visual Studio Code keybindings
+- [`.bash_prompt`](./linux/.bash_prompt) – Custom Bash prompt configuration
+- [`Microsoft.PowerShell_profile.ps1`](./windows/Microsoft.PowerShell_profile.ps1) - PowerShell profile script
+
+---
 
 ## ▶️ Usage
 
-To apply these configurations:
+Follow the instructions below to apply these configurations on your system.
+
+### PowerShell (Windows)
+
+1. Open your `Documents` directory.
+1. Create a folder named `MicrosoftPowerShell` if it already doesn't exist. (Note that this file may be hidden.)
+2. Inside this folder, create a file named `Microsoft.PowerShell_profile.ps1`.
+3. Copy the contents from this repository’s `Microsoft.PowerShell_profile.ps1` file into your new profile file.
+
+### Bash Prompt (Git Bash)
+
+1. In your home directory (`~`), create a file named `.bash_prompt`.
+2. Copy the contents of the `.bash_prompt` file from this repository into it.
+3. Open you `.bash_profile` or `.bashrc` file and add the following line:
+
+   ```bash
+   source ~/.bash_prompt
+   ```
+
+### VSCode
 
 **VSCode Settings & Keybindings**
 
@@ -21,23 +44,15 @@ To apply these configurations:
 4. Next, search for "Keyboard Shortcuts (JSON)".
 5. Copy the contents of the `keybindings.json` file and paste it into your keybindings configuration.
 
-**Bash Prompt**
+**Optional: Java Formatter**
 
-1. Open your `.bashrc` or `.bash_profile` file.
-2. Add the following line to source the `.bash_prompt` file:
-   
-   ```bash
-   source /path/to/this/repo/.bash_prompt
+If you use Java, you can apply Google’s Java style guide:
+
+1. Download the `java-google-style-formatter.xml` file.
+2. Move it to the following directory: `C:\Users\**<username>**\AppData\Roaming\Code\User`
+3. In your `settings.json`, add or update the following lines:
+
+   ```json
+   "java.format.settings.url": "`C:\Users\**<username>**\AppData\Roaming\Code\User\java-google-style-formatter.xml`",
+   "java.format.settings.profile": "GoogleStyle"
    ```
-   
-**PowerShell**
-
-1. Create a folder named `MicrosoftPowerShell` in your Documents directory.
-2. Inside this folder, create a file named `Microsoft.PowerShell_profile.ps1`.
-3. Copy the contents of the `Microsoft.PowerShell_profile.ps1` file into your new profile file.
-
-
-## Notes
-
-- These files reflect **my personal preferences**. Feel free to fork and adjust as needed.
-- For syncing VSCode settings automatically, consider using the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension.
