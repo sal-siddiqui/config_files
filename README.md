@@ -18,9 +18,9 @@ Follow the instructions below to apply these configurations on your system.
 ### PowerShell (Windows)
 
 1. Open your `Documents` directory.
-1. Create a folder named `MicrosoftPowerShell` if it already doesn't exist. (Note that this file may be hidden.)
-2. Inside this folder, create a file named `Microsoft.PowerShell_profile.ps1`.
-3. Copy the contents from this repository’s `Microsoft.PowerShell_profile.ps1` file into your new profile file.
+2. Create a folder named `MicrosoftPowerShell` if it already doesn't exist. (Note that this file may be hidden.)
+3. Inside this folder, create a file named `Microsoft.PowerShell_profile.ps1`.
+4. Copy the contents from this repository’s `Microsoft.PowerShell_profile.ps1` file into your new profile file.
 
 ### Bash Prompt (Git Bash)
 
@@ -28,9 +28,9 @@ Follow the instructions below to apply these configurations on your system.
 2. Copy the contents of the `.bash_prompt` file from this repository into it.
 3. Open you `.bash_profile` or `.bashrc` file and add the following line:
 
-   ```bash
-   source ~/.bash_prompt
-   ```
+```bash
+source ~/.bash_prompt
+```
 
 ### VSCode
 
