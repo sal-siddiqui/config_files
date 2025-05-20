@@ -11,8 +11,6 @@ Included configuration files:
 - [`.bash_prompt`](./linux/.bash_prompt) – Custom Bash prompt configuration
 - [`Microsoft.PowerShell_profile.ps1`](./windows/Microsoft.PowerShell_profile.ps1) - PowerShell profile script
 
----
-
 ## ▶️ Usage
 
 Follow the instructions below to apply these configurations on your system.
@@ -53,6 +51,6 @@ If you use Java, you can apply Google’s Java style guide:
 3. In your `settings.json`, add or update the following lines:
 
    ```json
-   "java.format.settings.url": "`C:\Users\**<username>**\AppData\Roaming\Code\User\java-google-style-formatter.xml`",
+   "java.format.settings.url": "`C:\\Users\\**<username>**\\AppData\\Roaming\\Code\\User\\java-google-style-formatter.xml`",
    "java.format.settings.profile": "GoogleStyle"
    ```
