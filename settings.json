@@ -91,7 +91,6 @@
     "renameUnusedLocalVariables",
     "useSwitchForInstanceofPattern",
     "renameFileToType",
-    
   ],
   "[java]" : {
     "editor.formatOnSave": true,
