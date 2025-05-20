@@ -50,7 +50,7 @@ If you use Java, you can apply Google’s Java style guide:
 2. Move it to the following directory: `C:\Users\**<username>**\AppData\Roaming\Code\User`
 3. In your `settings.json`, add or update the following lines:
 
-   ```json
-   "java.format.settings.url": "`C:\\Users\\**<username>**\\AppData\\Roaming\\Code\\User\\java-google-style-formatter.xml`",
-   "java.format.settings.profile": "GoogleStyle"
-   ```
+```json
+"java.format.settings.url": "`C:\\Users\\**<username>**\\AppData\\Roaming\\Code\\User\\java-google-style-formatter.xml`",
+"java.format.settings.profile": "GoogleStyle"
+```
