@@ -43,7 +43,7 @@
   "workbench.tips.enabled": false,
 
   "terminal.integrated.fontSize": 15,
-  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.lineHeight": 1.5,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.tabs.enabled": false,
 
@@ -62,7 +62,7 @@
 
   "files.exclude": {
     "**/.git": true,
-    ".vscode": true,
+    ".vscode": true
   },
 
   // -- Version Control
@@ -90,7 +90,7 @@
     "lambdaExpression",
     "renameUnusedLocalVariables",
     "useSwitchForInstanceofPattern",
-    "renameFileToType",
+    "renameFileToType"
   ],
   "[java]" : {
     "editor.formatOnSave": true,
@@ -99,6 +99,6 @@
       "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
     }
-  },
+  }
 
 }
