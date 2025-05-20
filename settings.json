@@ -1,5 +1,7 @@
 {
-  // Theme customizations
+  // -- Theme Customizations
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
       "scrollbar.shadow": "#2d353b",
@@ -12,27 +14,13 @@
   "editor.tokenColorCustomizations": {
     "[Everforest Dark]": {}
   },
-  "workbench.colorTheme": "Everforest Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right",
-  "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false,
-  "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "window.menuBarVisibility": "toggle",
-  "window.title": " ",
-  "workbench.tips.enabled": false,
-  "window.commandCenter": false,
-  "breadcrumbs.enabled": false,
-  "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false,
 
-  // Editor Settings
+  // -- Workbench - Editor - Explorer - Terminal
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
-  "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 120,
+  "editor.wordWrap": "bounded",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.stickyScroll.enabled": false,
@@ -42,55 +30,76 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
-  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  // Terminal Configuration
-  "terminal.integrated.fontSize": 15,
-  "terminal.integrated.lineHeight": 1.5,
-  "terminal.integrated.copyOnSelection": true,
-
-  // File Explorer
-  "material-icon-theme.folders.theme": "classic",
-  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
-  "files.dialog.defaultPath": "C:\\Users\\salma\\Documents",
   "workbench.editor.enablePreview": false,
+  "workbench.tips.enabled": false,
 
-  // Language Specific
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.tabs.enabled": false,
+
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  
+  "window.menuBarVisibility": "toggle",
+  "window.commandCenter": false,
+  
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  
+  "breadcrumbs.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "files.dialog.defaultPath": "C:\\Users\\salma\\Documents",
+
+  "files.exclude": {
+    "**/.git": true,
+    ".vscode": true,
   },
-  "[html][django-html][css][javascript][typescript]": {
-    "editor.defaultFormatter": "monosans.djlint"
-  },
-  "[json][jsonc][jsonl]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "java.foldingRange.enabled": true,
-  "java.server.launchMode": "Hybrid",
+
+  // -- Version Control
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "none",
+
+  // -- Java
+  "java.format.settings.url": "C:\\Users\\salma\\AppData\\Roaming\\Code\\User\\java-google-style-formatter.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.saveActions.cleanup": true,
   "java.completion.guessMethodArguments": "insertBestGuessedArguments",
   "java.inlayHints.parameterNames.enabled": "none",
-  "java.completion.chain.enabled": true,
-  "java.showBuildStatusOnStart.enabled": "notification",
-  "java.format.onType.enabled": true,
-  "java.edit.smartSemicolonDetection.enabled": true,
-  "java.saveActions.cleanup": true,
-  "java.completion.matchCase": "firstLetter",
-  "java.references.includeAccessors": true,
-
-  // Extensions
-  "code-runner.runInTerminal": true,
-  "code-runner.executorMap": {
-    "java": "clear; & 'C:\\Program Files\\Java\\jdk-24\\bin\\java.exe' '@C:\\Users\\salma\\AppData\\Local\\Temp\\cp_1bwxwwh7wzu0bwtdespqge7tb.argfile' 'com.spring_commerce.main.App'"
+  "java.cleanup.actions": [
+    "qualifyMembers",
+    "qualifyStaticMembers",
+    "addOverride",
+    "addDeprecated",
+    "stringConcatToTextBlock",
+    "invertEquals",
+    "addFinalModifier",
+    "instanceofPatternMatch",
+    "lambdaExpressionFromAnonymousClass",
+    "switchExpression",
+    "tryWithResource",
+    "lambdaExpression",
+    "renameUnusedLocalVariables",
+    "useSwitchForInstanceofPattern",
+    "renameFileToType",
+    
+  ],
+  "[java]" : {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.java",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
   },
-  "emmet.preferences": { "output.selfClosingStyle": "xhtml" },
-  "djlint.useVenv": false,
-  "djlint.pythonPath": "C:\\Users\\salma\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
 
-  // Version Control
-  "git.decorations.enabled": false,
-  "scm.diffDecorations": "none"
 }
