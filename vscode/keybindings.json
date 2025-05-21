@@ -19,19 +19,25 @@
     "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
-  // Show quick fix suggestions
+  {
+    "key": "ctrl+alt+numpad1",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+
+  // Show quick fix suggestions and accept first suggestion
   {
     "key": "ctrl+numpad2",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
-
-  // Accept first suggestion
   {
     "key": "ctrl+numpad2",
     "command": "acceptSelectedCodeAction",
     "when": "codeActionMenuVisible"
   },
+
+  // Remove Copilot generate binding
   {
     "key": "ctrl+enter",
     "command": "-github.copilot.generate",
