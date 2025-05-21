@@ -46,8 +46,8 @@ source ~/.bash_prompt
 
 **Python**
 
-1. Download the latest version of Python from python.org.
-2. Install the uv tool.
+1. Download the latest version of Python from [python.org](https://www.python.org/).
+2. Install the [uv tool](https://docs.astral.sh/uv/getting-started/installation/).
 3. Run the following command to install tools system-wide:
 
 ```bash
