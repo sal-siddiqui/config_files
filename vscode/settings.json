@@ -15,7 +15,7 @@
     "[Everforest Dark]": {}
   },
 
-  // -- Workbench - Editor - Explorer - Terminal
+  // -- Workbench, Editor, Explorer, Terminal
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
@@ -30,6 +30,7 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
+  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   "workbench.sideBar.location": "right",
@@ -69,6 +70,12 @@
   "git.decorations.enabled": false,
   "scm.diffDecorations": "none",
 
+  // -- HTML, Jinja
+  "[html][jinja-html][django-html]": {
+    "editor.defaultFormatter": "monosans.djlint",
+    "editor.formatOnSave": true
+  },
+
   // -- Java
   "java.completion.guessMethodArguments": "insertBestGuessedArguments",
   "java.inlayHints.parameterNames.enabled": "none",
@@ -93,23 +100,36 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "redhat.java",
     "editor.codeActionsOnSave": {
-      // "source.fixAll": "explicit",
+      "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
     }
   },
 
-  // -- Extensions
+  // -- Python
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.completeFunctionParens": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      // "source.fixAll": "explicit"
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // -- Code Runner Extension
   "code-runner.runInTerminal": true,
   "code-runner.clearPreviousOutput": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.ignoreSelection": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    // "python": "\"$pythonPath\" -u $fullFileName"
+    "python": "un run -u $fullFileName"
   },
 
-  // -- Other
+  // -- Djlint Extension
+  "djlint.configuration": "C:\\Users\\salma\\AppData\\Roaming\\djlint\\djlint.toml",
   "djlint.useVenv": false,
-  "djlint.pythonPath": "C:\\Users\\salma\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
-  "djlint.maxBlankLines": 2
+  "djlint.pythonPath": "C:\\Users\\salma\\AppData\\Roaming\\uv\\tools\\djlint\\Scripts\\python.exe"
 }
