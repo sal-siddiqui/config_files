@@ -63,7 +63,9 @@
 
   "files.exclude": {
     "**/.git": true,
-    ".vscode": true
+    ".vscode": true,
+    "__pycache__": true,
+    "*.egg-info": true
   },
 
   // -- Version Control
