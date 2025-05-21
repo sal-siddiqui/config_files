@@ -49,13 +49,13 @@
 
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
-  
+
   "window.menuBarVisibility": "toggle",
   "window.commandCenter": false,
-  
+
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
-  
+
   "breadcrumbs.enabled": false,
   "chat.commandCenter.enabled": false,
   "files.dialog.defaultPath": "C:\\Users\\salma\\Documents",
@@ -70,9 +70,6 @@
   "scm.diffDecorations": "none",
 
   // -- Java
-  "java.format.settings.url": "C:\\Users\\salma\\AppData\\Roaming\\Code\\User\\java-google-style-formatter.xml",
-  "java.format.settings.profile": "GoogleStyle",
-  "java.saveActions.cleanup": true,
   "java.completion.guessMethodArguments": "insertBestGuessedArguments",
   "java.inlayHints.parameterNames.enabled": "none",
   "java.cleanup.actions": [
@@ -92,13 +89,27 @@
     "useSwitchForInstanceofPattern",
     "renameFileToType"
   ],
-  "[java]" : {
+  "[java]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "redhat.java",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
+      // "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
     }
-  }
+  },
 
+  // -- Extensions
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.ignoreSelection": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    // "python": "\"$pythonPath\" -u $fullFileName"
+  },
+
+  // -- Other
+  "djlint.useVenv": false,
+  "djlint.pythonPath": "C:\\Users\\salma\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "djlint.maxBlankLines": 2
 }
