@@ -1,0 +1,22 @@
+# -- Formatter
+# Close void tags.
+close_void_tags=true
+
+# Formatter will attempt to wrap tag attributes if the attribute length exceeds this value.
+max_attribute_length=15 
+
+# Consolidate blank lines down to x lines. Default is 0 meaning blank lines will be removed.
+max_blank_lines=2 
+
+# Formatter will attempt to put some html and template tags on a single line instead of wrapping them if the line length will not exceed this value.
+max_line_length=120
+
+
+# -- Linter
+# H006: img tag should have height and width attributes.
+# H013: img tag should have alt attributes.
+# H023: Do not use entity references.
+# H030: Consider adding a meta description.
+# H031: Consider adding meta keywords.
+ignore="H006,H013,H023,H030,H031"
+
