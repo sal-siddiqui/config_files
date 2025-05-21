@@ -10,6 +10,8 @@ Included configuration files:
 - [`keybindings.json`](./vscode/keybindings.json) – Visual Studio Code keybindings
 - [`.bash_prompt`](./linux/.bash_prompt) – Custom Bash prompt configuration
 - [`Microsoft.PowerShell_profile.ps1`](./windows/Microsoft.PowerShell_profile.ps1) - PowerShell profile script
+- [`ruff.toml`](./vscode/ruff.toml) - Ruff configurations (Python linter & formatter)
+- [`djlint.toml`](./vscode/djlint.toml) - djlint Configurations (HTML/Jinja linter & formatter)
 
 ## ▶️ Usage
 
@@ -34,8 +36,22 @@ source ~/.bash_prompt
 
 ### VSCode
 
+**Settings & Keybindings**
+
 1. Open VSCode and press `Ctrl + Shift + P`.
 2. Search for "User Settings (JSON)" and open it.
 3. Copy the contents of the `settings.json` file and paste it into your settings.
 4. Next, search for "Keyboard Shortcuts (JSON)".
 5. Copy the contents of the `keybindings.json` file and paste it into your keybindings configuration.
+
+### Python
+
+1. Download the latest version of python from python.rog
+2. Download the uv tool from uv.com
+3. Execute
+
+
+
+
+### Java
+
