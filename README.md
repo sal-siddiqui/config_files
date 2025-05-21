@@ -10,8 +10,8 @@ Included configuration files:
 - [`keybindings.json`](./vscode/keybindings.json) – Visual Studio Code keybindings
 - [`.bash_prompt`](./linux/.bash_prompt) – Custom Bash prompt configuration
 - [`Microsoft.PowerShell_profile.ps1`](./windows/Microsoft.PowerShell_profile.ps1) - PowerShell profile script
-- [`ruff.toml`](./vscode/ruff.toml) - Ruff configurations (Python linter & formatter)
-- [`djlint.toml`](./vscode/djlint.toml) - djlint Configurations (HTML/Jinja linter & formatter)
+- [`ruff.toml`](./vscode/ruff.toml) - Configuration for Ruff (Python linter & formatter)
+- [`djlint.toml`](./vscode/djlint.toml) - Configuration for djlint (HTML/Jinja linter & formatter)
 
 ## ▶️ Usage
 
@@ -44,14 +44,16 @@ source ~/.bash_prompt
 4. Next, search for "Keyboard Shortcuts (JSON)".
 5. Copy the contents of the `keybindings.json` file and paste it into your keybindings configuration.
 
-### Python
+**Python**
 
-1. Download the latest version of python from python.rog
-2. Download the uv tool from uv.com
-3. Execute
+1. Download the latest version of Python from python.org.
+2. Install the uv tool.
+3. Run the following command to install tools system-wide:
 
+```bash
+uv install tool djlint ruff
+```
 
-
-
-### Java
+4. Copy `djlint.toml` to `C:\Users\<username>\AppData\Roaming\djlint`
+5. Copy `ruff.toml` to `C:\Users\<username>\AppData\Roaming\ruff`
 
