@@ -19,11 +19,6 @@
     "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
-  {
-    "key": "ctrl+alt+numpad1",
-    "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus"
-  },
 
   // Show quick fix suggestions and accept first suggestion
   {
@@ -42,5 +37,19 @@
     "key": "ctrl+enter",
     "command": "-github.copilot.generate",
     "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+  },
+
+  // New Terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+
+  // Delete Terminal
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   }
 ]
