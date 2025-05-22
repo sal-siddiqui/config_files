@@ -108,9 +108,7 @@
   },
 
   // -- Python
-  "python.analysis.autoImportCompletions": true,
   "python.analysis.autoFormatStrings": true,
-  "python.analysis.completeFunctionParens": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
@@ -119,6 +117,10 @@
       "source.organizeImports": "explicit"
     }
   },
+
+  // -- Error Lens Extension
+  "errorLens.fontStyleItalic": true,
+  "errorLens.messageBackgroundMode": "none",
 
   // -- Code Runner Extension
   "code-runner.runInTerminal": true,
