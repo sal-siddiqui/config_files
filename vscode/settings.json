@@ -64,7 +64,7 @@
   "files.exclude": {
     "**/.git": true,
     ".vscode": true,
-    "__pycache__": true,
+    "**/__pycache__": true,
     "*.egg-info": true
   },
 
@@ -108,7 +108,6 @@
   },
 
   // -- Python
-  "python.analysis.autoFormatStrings": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
@@ -124,12 +123,11 @@
 
   // -- Code Runner Extension
   "code-runner.runInTerminal": true,
-  "code-runner.clearPreviousOutput": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.ignoreSelection": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "python": "un run -u $fullFileName"
+    "python": "clear; uv run $fullFileName"
   },
 
   // -- Djlint Extension
