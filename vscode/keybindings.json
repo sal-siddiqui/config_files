@@ -20,15 +20,24 @@
     "when": "editorFocus"
   },
 
-  // Show quick fix suggestions and accept first suggestion
+  // Show quick fix suggestions
   {
     "key": "ctrl+numpad2",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
+
+  // Accept selected suggestion
   {
     "key": "ctrl+numpad2",
     "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+
+  // Move to next suggestion
+  {
+    "key": "ctrl+numpad3",
+    "command": "selectNextCodeAction",
     "when": "codeActionMenuVisible"
   },
 
@@ -51,5 +60,11 @@
     "key": "ctrl+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+
+  // Create New File or Folder
+  {
+    "key": "ctrl+n",
+    "command": "extension.advancedNewFile"
   }
 ]
