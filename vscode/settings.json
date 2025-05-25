@@ -48,6 +48,10 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.tabs.enabled": false,
 
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
 
