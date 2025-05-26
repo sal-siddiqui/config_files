@@ -30,8 +30,12 @@
   "editor.lightbulb.enabled": "off",
   "editor.occurrencesHighlight": "off",
   "editor.foldingHighlight": false,
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
 
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "hidden",
@@ -78,8 +82,7 @@
 
   // -- HTML, Jinja
   "[html][jinja-html][django-html]": {
-    "editor.defaultFormatter": "monosans.djlint",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "monosans.djlint"
   },
 
   // -- Java
@@ -103,22 +106,24 @@
     "renameFileToType"
   ],
   "[java]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "redhat.java",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
-    }
+    "editor.defaultFormatter": "redhat.java"
   },
 
   // -- Python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      // "source.fixAll": "explicit"
-      "source.organizeImports": "explicit"
+      "source.fixAll": "never"
     }
+  },
+
+  // -- Jupyter
+  "notebook.lineNumbers": "on",
+  "notebook.formatOnSave.enabled": true,
+
+  // -- TOML
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
 
   // -- Error Lens Extension
