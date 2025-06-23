@@ -6,8 +6,9 @@ get_git_branch() {
 # Function to build the PS1 prompt dynamically
 build_prompt() {
   local venv=""
-  local dir="\[\e[1;34m\]\W\[\e[0m\]"           # Current directory in blue
-  local branch="$(get_git_branch)"               # Get the current Git branch
+  local user_host="\[\e[1;32m\]\u \[\e[1;35m\]\h\[\e[0m\]"  # User and host in green/purple
+  local dir="\[\e[1;34m\]\W\[\e[0m\]"                       # Current directory in blue
+  local branch="$(get_git_branch)"                          # Get the current Git branch
   local branch_display=""
 
   # If a Git branch is present, display it in square brackets (yellow, non-bold)
@@ -21,7 +22,7 @@ build_prompt() {
   fi
 
   # Build the final PS1 prompt
-  echo "\n${venv}${dir}${branch_display}\n\[\e[1;37m\]\\$\[\e[0m\] "
+  echo "\n${user_host}\n${venv}${dir}${branch_display}\n\[\e[1;37m\]\\$\[\e[0m\] "
 }
 
 # Set PROMPT_COMMAND to update the PS1 dynamically
