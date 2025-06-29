@@ -1,6 +1,4 @@
 {
-  // -- Theme Customizations
-  "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
@@ -16,6 +14,7 @@
   },
 
   // -- Workbench, Editor, Explorer, Terminal
+  "workbench.colorTheme": "Everforest Dark",
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
@@ -116,10 +115,6 @@
       "source.fixAll": "never"
     }
   },
-
-  // -- Jupyter
-  "notebook.lineNumbers": "on",
-  "notebook.formatOnSave.enabled": true,
 
   // -- TOML
   "[toml]": {
