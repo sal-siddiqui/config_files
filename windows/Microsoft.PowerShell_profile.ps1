@@ -1,12 +1,16 @@
 function prompt {
     # Get current directory name only
-    $currentDir = (Get-Location).Path.Split('\')[-1]
+    $currentDir = (Get-Item -Path ".\").Name
+    $username = $env:USERNAME
+    $computername = $env:COMPUTERNAME
 
-    # ANSI escape codes
-    $green      = "$([char]27)[0;32m"
-    $blueBold   = "$([char]27)[1;34m"
-    $yellow     = "$([char]27)[0;33m"
-    $reset      = "$([char]27)[0m"
+    # ANSI escape codes for colors
+    $green       = "$([char]27)[0;32m"    # Virtual env color
+    $blueBold    = "$([char]27)[1;34m"    # Directory color
+    $yellow      = "$([char]27)[0;33m"    # Git branch color
+    $cyanBold    = "$([char]27)[1;36m"    # Bold cyan (username)
+    $purpleBold  = "$([char]27)[1;35m"    # Bold purple (hostname)
+    $reset       = "$([char]27)[0m"
 
     # Virtual environment (if any)
     $venv = ""
@@ -26,7 +30,7 @@ function prompt {
 
     # Display the prompt
     Write-Host ""
-    Write-Host "$venv$blueBold$currentDir$reset$gitBranch" -NoNewline
+    Write-Host "$venv$cyanBold$username$reset at $purpleBold$computername$reset in $blueBold$currentDir$reset$gitBranch" -NoNewline
 
     # Reset LASTEXITCODE
     $global:LASTEXITCODE = 0
