@@ -83,4 +83,5 @@ lint.ignore = [
     "UP032",   # Pyupgrade - Use f-string instead of `format`
     "S201",    # Flask8-bandit - Checks for uses of debug=True in Flask.
     "S104",    # Flask8-bandit - Checks for hardcoded bindings to all network interfaces (0.0.0.0).
+    "PIE790",  # Flake8-pie - Checks for unnecessary pass statements and ellipsis (...) literals in functions, classes, and other blocks.
 ]
