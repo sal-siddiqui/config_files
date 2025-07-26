@@ -116,6 +116,10 @@
     }
   },
 
+  // -- JavaScript & TypeScript
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+
   // -- TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
