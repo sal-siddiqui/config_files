@@ -1,5 +1,5 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
+  // -- Workbench, Editor, Explorer, Terminal
   "workbench.colorCustomizations": {
     "[Everforest Dark]": {
       "scrollbar.shadow": "#2d353b",
@@ -13,8 +13,8 @@
     "[Everforest Dark]": {}
   },
 
-  // -- Workbench, Editor, Explorer, Terminal
   "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Consolas",
   "editor.fontSize": 15,
   "editor.lineHeight": 2.0,
@@ -135,7 +135,7 @@
   "code-runner.ignoreSelection": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "python": "clear; uv run $fullFileName"
+    // "<language>": "<commands>"
   },
 
   // -- Djlint Extension
