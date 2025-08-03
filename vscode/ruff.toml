@@ -66,8 +66,8 @@ lint.extend-select = [
     "PERF", # Perflint – performance-related checks
     "FURB", # Refurb – rules for code refurbishment
     # "DOC",  # Pydoclint – docstring linting and consistency
-    "RUF", # Ruff-specific rules – additional Ruff checks
-    "RET504",  # Flake8-return - Checks for variable assignments that immediately precede a return of the assigned variable.
+    "RUF",    # Ruff-specific rules – additional Ruff checks
+    "RET504", # Flake8-return - Checks for variable assignments that immediately precede a return of the assigned variable.
 ]
 
 lint.ignore = [
@@ -86,3 +86,5 @@ lint.ignore = [
     "PIE790",  # Flake8-pie - Checks for unnecessary pass statements and ellipsis (...) literals in functions, classes, and other blocks.
     "S105",    # Flake8-bandit - Checks for potential uses of hardcoded passwords in strings.
 ]
+
+line-length = 150
